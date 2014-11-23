@@ -71,8 +71,8 @@ write.table(aggdb, file="TidyDataSet.txt", row.names=FALSE)
 
 #Show it in cross tabular form
 rx <- xtabs(activityMean~subject+activitylabel, aggdb)
-rx
-# 
+write.table(rx, file="TabularReport.txt")
+#Sample report
 # activitylabel
 # subject       LAYING      SITTING     STANDING      WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
 # 1  -0.647514216 -0.687054248 -0.714645902 -0.196002515       -0.159762697     -0.308922413
